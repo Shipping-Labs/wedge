@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+/* Design tokens (colors, fonts, radius) from the original landing page. */
+@theme inline {
+  --color-ink: #17171c;
+  --color-muted: #5d5d69;
+  --color-cream: #fbf8f3;
+  --color-card: #fff;
+  --color-line: #ebe5da;
+  --color-accent: #c2410c;
+  --color-accent-d: #9a3412;
+  --color-tint: #fff1e6;
+  --color-dark: #17171c;
+  --color-glow: #fdba74;
+  --color-dim: #b8b3a8;
+  --color-field: #d9d2c4;
+  --color-body-2: #3a3a44;
+
+  --radius-card: 16px;
+
+  --font-serif: var(--font-fraunces), Georgia, "Times New Roman", serif;
+  --font-sans: var(--font-inter), system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+/* The original page switches layout at 960px and 560px (max-width). */
+@custom-variant tab (@media (max-width: 960px));
+@custom-variant mobile (@media (max-width: 560px));
+
+/* Things Tailwind utilities cannot express (or are clearer as element defaults). */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-serif);
+    font-weight: 700;
+    line-height: 1.12;
+    letter-spacing: -0.01em;
+  }
+  h1 {
+    font-size: clamp(2.4rem, 5.6vw, 4.2rem);
+  }
+  h2 {
+    font-size: clamp(1.8rem, 3.4vw, 2.6rem);
+  }
+  h3 {
+    font-size: 1.25rem;
+  }
+
+  button:focus-visible,
+  input:focus-visible,
+  summary:focus-visible,
+  a:focus-visible {
+    outline: 3px solid #fdba74;
+    outline-offset: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      transition: none !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
