@@ -1,4 +1,4 @@
-import SignupForm from "./SignupForm";
+import BeehiivEmbed from "./BeehiivEmbed";
 
 export default function Hero() {
   return (
@@ -19,9 +19,8 @@ export default function Hero() {
           SaaS themes that matter, ideas worth stealing, launches with real
           numbers, and the problems founders keep running into.
         </p>
-        <SignupForm
-          id="hero"
-          button="Get the next issue"
+        <BeehiivEmbed
+          id="hero-form"
           fine="One email a week. No spam. Unsubscribe in one click."
         />
       </div>

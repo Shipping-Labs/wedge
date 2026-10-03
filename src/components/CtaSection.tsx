@@ -1,5 +1,5 @@
 import Container from "./Container";
-import SignupForm from "./SignupForm";
+import BeehiivEmbed from "./BeehiivEmbed";
 
 export default function CtaSection() {
   return (
@@ -11,10 +11,9 @@ export default function CtaSection() {
             Join the list and the brief arrives weekly. Reply to any issue and a
             human reads it.
           </p>
-          <SignupForm
-            id="cta"
+          <BeehiivEmbed
+            id="cta-form"
             variant="cta"
-            button="Subscribe"
             fine="Free. One email a week. Unsubscribe anytime."
           />
         </div>

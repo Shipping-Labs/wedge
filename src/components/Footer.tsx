@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Container from "./Container";
 
 const link = "text-muted underline";
@@ -11,13 +12,13 @@ export default function Footer() {
           <br />A weekly brief by Vipul Yadav.
         </div>
         <div>
-          <a className={link} href="#">
+          <Link className={link} href="/privacy">
             Privacy
-          </a>
+          </Link>
           {" \u00a0·\u00a0 "}
-          <a className={link} href="#">
+          <Link className={link} href="/terms">
             Terms
-          </a>
+          </Link>
           {" \u00a0·\u00a0 "}
           <a className={link} href="#">
             Contact
